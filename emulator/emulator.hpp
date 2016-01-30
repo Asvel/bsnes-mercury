@@ -9,11 +9,11 @@ namespace Emulator {
   static const char Website[] = "http://byuu.org/";
 
   #if defined(PROFILE_ACCURACY)
-  static const char Profile[] = "Accuracy";
+  static const char Profile[] = "Accuracy-";  // Long name will cause libretro failed to load state
   #elif defined(PROFILE_BALANCED)
-  static const char Profile[] = "Balanced";
+  static const char Profile[] = "Balanced-";
   #elif defined(PROFILE_PERFORMANCE)
-  static const char Profile[] = "Performance";
+  static const char Profile[] = "Performance-";
   #endif
 }
 

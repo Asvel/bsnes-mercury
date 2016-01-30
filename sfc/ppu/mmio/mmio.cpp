@@ -42,7 +42,7 @@ uint8 PPU::vram_read(unsigned addr) {
 void PPU::vram_write(unsigned addr, uint8 data) {
   debugger.vram_write(addr, data);
 
-  if(regs.display_disable || vcounter() >= (!regs.overscan ? 225 : 240)) {
+  if(1 || regs.display_disable || vcounter() >= (!regs.overscan ? 225 : 240)) {
     vram[addr] = data;
   }
 }

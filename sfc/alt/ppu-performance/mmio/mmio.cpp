@@ -28,7 +28,7 @@ uint8 PPU::vram_read(unsigned addr) {
 }
 
 void PPU::vram_write(unsigned addr, uint8 data) {
-  if(regs.display_disable || cpu.vcounter() >= display.height) {
+  if(1 || regs.display_disable || cpu.vcounter() >= display.height) {
     vram[addr] = data;
     cache.tilevalid[0][addr >> 4] = false;
     cache.tilevalid[1][addr >> 5] = false;

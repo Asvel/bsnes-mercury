@@ -52,7 +52,7 @@ uint8 PPU::vram_mmio_read(uint16 addr) {
 }
 
 void PPU::vram_mmio_write(uint16 addr, uint8 data) {
-  if(regs.display_disabled == true) {
+  if(1 || regs.display_disabled == true) {
     vram[addr] = data;
   } else {
     uint16 v = cpu.vcounter();
